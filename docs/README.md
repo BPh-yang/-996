@@ -1,4 +1,3 @@
-# 此文档是 XXX 开发 API 文档
+# Headline
 
 > An awesome project.
-
