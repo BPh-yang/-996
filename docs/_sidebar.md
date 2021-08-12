@@ -1,4 +1,10 @@
-<!-- docs/_sidebar.md -->
 
-* [首页](zh-cn/)
-* [指南](user/将map转成具体的实例对象)
+* 用户接口
+
+	* [登录功能](user/)
+	* [获取用户信息](user/getuserinfo)
+	* [获取用户列表](user/getuerlist)
+
+* 产品接口
+
+
