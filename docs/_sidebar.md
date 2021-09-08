@@ -3,6 +3,8 @@
 
 	* Java常用工具类
 		* [手写分页工具类](Java常用工具类/手写分页工具类)
+		* [MultipartFile转成File](Java常用工具类/MultipartFile转成File)
+		* [Hutool工具类](Java常用工具类/Hutool工具类)
 	* [获取用户信息](user/getuserinfo)
 	* [获取用户列表](user/getuerlist)
 
