@@ -7,5 +7,5 @@
 <!-- * 简单明了
 * 自带演示地址 -->
 
-<!-- [GitHub](https://github.com/githubchen001)
-[Get Started](#) -->
+[GitHub](https://github.com/githubchen001)
+[Get Started](#docsify)
