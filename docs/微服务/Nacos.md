@@ -126,6 +126,9 @@ spring.cloud.nacos.config.shared-dataids=ext-config-common01.properties,xt-confi
 ##指定DataId动态更新
 spring.cloud.nacos.config.refreshable-dataids=ext-config-common01.properties
 
+##关闭获取配置
+#spring.cloud.nacos.config.enabled=false
+
 ```
 #### 配置的优先级
 Springcloud Alibaba Nacos Config提供了三种方式从nacos配置中心拉取配置
