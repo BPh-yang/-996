@@ -108,8 +108,8 @@ spring.cloud.nacos.config.server-addr=127.0.0.1:8848
 spring.cloud.nacos.config.file-extension=properties
 #指定命名空间
 spring.cloud.nacos.config.namespace=97680f64-5986-44ab-87c9-ea6665d0c65b
-#指定分组
-spring.cloud.nacos.config.group=TEST_GROUP
+
+#自定义扩展DataId
 #DataId 在默认分组，不支持动态更新
 spring.cloud.nacos.config.ext-config[0].data-id=ext-config-common01.properties
 #DataId 指定分组，不支持动态更新
@@ -120,4 +120,20 @@ spring.cloud.nacos.config.ext-config[2].data-id=ext-config-common03.properties
 spring.cloud.nacos.config.ext-config[2].group=REFRESH_GROUP
 spring.cloud.nacos.config.ext-config[2].refresh=true
 
+#自定义共享DataId
+#共享DataId,默认取第一个配置文件的分组,建议使用自定义扩展DataId指定多个配置文件
+spring.cloud.nacos.config.shared-dataids=ext-config-common01.properties,xt-config-common02.properties,xt-config-common03.properties
+##指定DataId动态更新
+spring.cloud.nacos.config.refreshable-dataids=ext-config-common01.properties
+
 ```
+#### 配置的优先级
+Springcloud Alibaba Nacos Config提供了三种方式从nacos配置中心拉取配置
+
+A: spring.cloud.nacos.config.shared-dataids支持多个共享data-id的配置
+
+B:spring.cloud.nacos.config.ext-config[n].data-id的方式支持多个data-id的配置，其中，需要注意的优先级是n的值越大，配置的优先级越高，数组的下标从0开始
+
+C:通过内部相关规则（应用名+扩展名）自动生成data-id的的配置
+
+**上述三种配置的优先级别就是： C>B>A,希望我们在使用的时候注意一下**
