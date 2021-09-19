@@ -145,21 +145,29 @@ C:通过内部相关规则（应用名+扩展名）自动生成data-id的的配�
 
 **上述三种配置的优先级别就是： C>B>A,希望我们在使用的时候注意一下**
 
-### 集群的配置
+## 集群的配置
 
 一般集群需要至少3个节点。我们先准备3台机器： 192.168.11.200、192.168.11.196、192.168.11.126，或者同一台机器改成3个不同的端口
 如果在同一台机器可以先把Nacos复制3份
 
 ![imags](../imgs/Nacos/QQ截图20210919192249.png)
 
+
 在E:\weifuwu\nacos\conf 修改application.properties配置，再把nacos2和nacos3都修改好，注意修改的端口不要被占用，不然启动会报错
+
 ![imags](..\imgs\Nacos\QQ截图20210919192503.png)
 
+
 再把同一个文件夹的cluster.conf.example复制一份改名为cluster.conf
+
 ![imags](..\imgs\Nacos\QQ截图20210919192816.png)
 
+
 然后修改cluster.conf配置
+
 ![imags](..\imgs\Nacos\QQ截图20210919192942.png)
 
+
 第四行的IP端口是启动后自动新增的，前三行IP端口分别是nacos、nacos1、nacos2你application.properties里修改的端口加机器IP，最后依次动服务
+
 ![imags](..\imgs\Nacos\QQ截图20210919193700.png)
