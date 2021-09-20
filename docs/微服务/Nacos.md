@@ -133,6 +133,13 @@ spring.cloud.nacos.config.refreshable-dataids=ext-config-common01.properties
 ##关闭获取配置
 #spring.cloud.nacos.config.enabled=false
 
+##服务发现
+spring.cloud.nacos.discovery.server-addr=127.0.0.1:8848
+##服务发现指定命名空间
+spring.cloud.nacos.discovery.namespace=50dabf15-094f-4da9-b2b2-405ba2e8529d
+##指定集群
+spring.cloud.nacos.config.cluster-name=DEFAULT
+
 ```
 #### 配置的优先级
 Springcloud Alibaba Nacos Config提供了三种方式从nacos配置中心拉取配置
@@ -171,3 +178,16 @@ C:通过内部相关规则（应用名+扩展名）自动生成data-id的的配�
 第四行的IP端口是启动后自动新增的，前三行IP端口分别是nacos、nacos1、nacos2你application.properties里修改的端口加机器IP，最后依次动服务
 
 ![imags](..\imgs\Nacos\QQ截图20210919193700.png)
+
+
+|  配置项 | Key | 默认值 | 说明 |
+|  ----  |  ----  |  ----  |  ----  |
+| 服务端地址  | spring.cloud.nacos.discovery.server-addr | 无 | NacosServer 启动监听的ip地址和端口 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+| 单元格  | 单元格 | 单元格 | 单元格 |
+
